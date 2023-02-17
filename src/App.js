@@ -1,213 +1,261 @@
 import logo from './logo.svg';
 import './App.css';
 
- // 13-02-23/ Monday 
-    // -ES6 let and const
-    // -ES6 Arrow function
+ // 14-02-23/ Tuesday 
+    // -Arrays
+    // -Classes
 
 function App() {
 
- // Arrays Method
-    // 1. length
-    // 2. sort()
-    // 3. concat()
-    // 4. reverse()
-    // 5. pop()
-    // 6. push()
-    // 7. shift()
-    // 8. unshift()
-    // 9. indexOf()
-    // 10. toString()
-    // 11. slice()
-    // 12. splice()
-    // 13. map()
-    // 14. foreach()
-    // 15. filter()
+ // 0- Syntax (classes) :-
+
+      // class demo{
+      //     constructor(.. , ..)  // perameter
+      //     {
+      //         // ..............  // perameter
+      //         // ..............  // perameter
+      //     }
+      // }
+
+    //   const s= new demo(".." , ",,");  // object
+    //   const s1= new demo(".." , ",,");  // object (Array of object)
 
 
-  // 1-length :-
 
-    // var arr= ["10","15","20","25","30","35","40","45","50"];
-    // var len= arr.length;
+ // 1- step-1 (simple object)
+  
+    // const obj= {
+    //     name : "mehul",
+    //     age : "23",
+    // }
 
-    // console.log(len);
-
-
-  // 2-sort :-
-
-    // let arr= ["40","35","25","10","30","50","20","45","15"];
-    // let sort= arr.sort();
-    // let join= arr.join("-");
-
-    // console.log(sort);
-
-
-  // 3-concat :-
-
-    // const arr1= ["React js is a "];
-    // const arr2= ["javascript library."];
-    // const con= arr1.concat(arr2);
+    // class demo{
+    //     constructor(name,age)
+    //     {
+    //         this.name= name;
+    //         this.age= age;       
+    //     }
+    // }
 
 
-  // 4-reverse :-
 
-    // const arr= ["React js","Javascript","JQuery","Bootstrap","Css","Html"];
-    // let rev= arr.reverse();
-    // var join= arr.join("-");
-    
-    // console.log(rev);
+ // 2- step-2 (simple object (1,3), new object (2,4), Array of object (5))
+ 
+  // method-1 (simple object)
 
+    // const p= {
+    //     name : "Gopal",
+    //     age : "23",
+    // }
 
-  // 5-pop :-
-
-    // let arr= ["10","15","20","25","30","35","40","45","50"];
-    // let pop= arr.pop();
-
-    // console.log(pop);
-
-
-  // 6-push :-
-
-    // let arr= ["10","15","20","25","30","35","40","45","50"];
-    // let push= arr.push("55");
-
-    // console.log(push);
+    // class demo{
+    //     constructor(name,age)
+    //     {
+    //         this.name= name;
+    //         this.age= age;
+    //     }
+    // }
 
 
-  // 7-shift :-
+  // method-2 (new object)
 
-    // const arr= ["10","15","20","25","30","35","40","45","50"];
-    // const shift= arr.shift(); 
+    // class demo{
+    //     constructor(name,age)
+    //     {
+    //         this.name= name;
+    //         this.age= age;
+    //     }
+    // }
 
-    // console.log(shift);
-
-
-  // 8-unshift :-
-
-    // const arr= ["10","15","20","25","30","35","40","45","50"];
-    // const un= arr.unshift("5");
-
-    // console.log(un);
-
-    
-  // 9-indexOf :-
-
-    // let arr= ["Php", "Node", "Javascript","Reactjs","Flutter"];
-    // let inx= arr.indexOf("Reactjs");
-
-    // console.log(inx);
+    // const p= new demo("Mehul","29")
 
 
-  // 10-toString :-
+  // method-3 (simple object)
 
-    // const arr= ["Php", "Node", "Javascript","Reactjs","Flutter"];
-    // const str= arr.toString();
+    // const c= {
+    //     name : "BMW",
+    //     company : "car-volty",
+    //     model : "bm-7",
+    //     color : "red",
+    // }
 
-    // console.log(str);
-
-
-  // 11-slice :-
-
-    // let arr= ["Php", "Node", "Javascript","Reactjs","Flutter"];
-    // let slc= arr.slice(2);
-    // let join= slc.join("-");
-
-    // console.log(slc);
-
-
-  // 13-map :-
-
-    // const arr= [10,15,20,25,30,35,40,45,50];
-    // const arr= [1,2,3,4,5,6,7,8,9,10];    // multipication / 6 table print 
-
-
-  // 15-filter :- (condition vali multiple value)
-
-    // const arr= [10,15,20,25,30,35,40,45,50];
-    // const arr= [1,2,3,4,5,6,7,8,9,10];    // multipication / 6 table print / Even-Odd number
+    // class car{
+    //     constructor(name,company,model,color)
+    //     {
+    //         this.name= name;
+    //         this.company= company;
+    //         this.model= model;
+    //         this.color= color;
+    //     }
+    // }
     
 
-    console.log("Array++",arr); 
+  // method-4 (new object)
+
+    // class car{
+    //     constructor(name,company,model,color)
+    //     {
+    //         this.name= name;
+    //         this.company= company;   
+    //         this.model= model;
+    //         this.color= color;
+    //     }
+    // }
+
+    // const c= new car("Audi","audi-shop","ad-20","black");
+
+
+  // method-5 (Array of object)
+
+    // class bike{
+    //     constructor(name,company,price)
+    //     {
+    //         this.name= name;
+    //         this.company= company;
+    //         this.price= price;
+    //     }
+    // }
+
+    // const b= new bike("Shine","Honda","Rs. 1,10,000");
+    // const b2= new bike("Splendar plus+","Hero","Rs. 78,000");
+
+
+
+ // 3- step-3 (table-list student / map)
+
+    // const list= [
+    //     {
+    //         id : "2303",
+    //         name : "prashant",
+    //         age : "17",
+    //     },
+    //     {
+    //         id : "2304",
+    //         name : "radhe",
+    //         age : "18",
+    //     },
+    //     {
+    //         id : "8975",
+    //         name : "prashant",
+    //         age : "17",
+    //     },
+    //     {
+    //         id : "6782",
+    //         name : "krishna",
+    //         age : "19",
+    //     },
+    //     {
+    //         id : "6757",
+    //         name : "rahul",
+    //         age : "18",
+    //     },
+    // ];
+
+    // console.log("List++", list);
+
+
+
+
+
 
 
   return (
     <div className="App">
 
-      {/* 1. length :- */}
-        {/* <div> <b>Length :-</b> {len}</div> */}
+    {/* 1. step-1 (simple object) */}
+
+         {/* demo Name : <b>{obj.name}</b> <br/>
+         demo Age : <b>{obj.age}</b>  */}
 
 
-      {/* 2. sort :- */}
-        {/* <div> <b>Sort :-</b> {sort}</div> */}
-        {/* <div> <b>Sort / join :-</b> {sort,join}</div> */}
+
+    {/* 2. step-2 (simple object (1,3), new object (2,4), Array of object (5)) */}
+
+       {/* method-1 (simple object) */}
+
+         {/* <h3>Student</h3>
+
+         <div> Name :- {p.name}</div>
+         <div> Age :- {p.age}</div> */}
 
 
-      {/* 3. concat :-  */}
-        {/* <div> <b>Concat :-</b> {con}</div> */}
+       {/* method-2 (new object) */}
+
+         {/* <h3>Student</h3>
+
+         <div> Name :- {p.name}</div>
+         <div> Age :- {p.age}</div> */}
 
 
-      {/* 4. reverse :-  */}
-        {/* <div> <b>Reverse :-</b> {rev}</div> */}
-        {/* <div> <b>Reverse / join :-</b> {rev,join}</div> */}
+       {/* method-3 (simple object) */}
+
+         {/* <h3>Car</h3>
+
+         <div> Name :- {c.name} </div>
+         <div> Company :- {c.company} </div>
+         <div> Model :- {c.model} </div>
+         <div> Color :- {c.color} </div> */}
 
 
-      {/* 5. pop :-  */}
-        {/* <div> <b>Pop :-</b> {pop}</div> */}
+       {/* method-4 (new object) */}
+
+         {/* <h3>Car</h3>
+
+         <div> Name :- {c.name}</div>
+         <div> Company :- {c.company}</div>
+         <div> Model :- {c.model}</div>
+         <div> Color :- {c.color}</div> */}
 
 
-      {/* 6. push :-  */}
-        {/* <div> <b>Push :-</b> {push}</div> */}
+       {/* method-5 (Array of object) */}
+
+         {/* <h3>Bike</h3>
+
+         <div> Name :- {b.name} </div>
+         <div> Company :- {b.company} </div>
+         <div> Price :- {b.price} </div>
+
+                <br/>
+
+         <div> Name :- {b2.name} </div>
+         <div> Company :- {b2.company} </div>
+         <div> Price :- {b2.price} </div> */}
 
 
-      {/* 7. shift :-  */}
-        {/* <div> <b>Shift :-</b> {shift}</div> */}
+
+    {/* 3. step-3 (table-List student / map) */}
+
+         {/* <h3>List Student</h3>
+
+         <table border={1}>
+            <thead>
+                <tr>
+                    <td> <b>Id</b> </td>
+                    <td> <b>Name</b> </td>
+                    <td> <b>Age</b> </td>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    list.map((i) => {
+                        return(
+                            <tr>
+                                <td> {i.id} </td>
+                                <td> {i.name} </td>
+                                <td> {i.age} </td>
+                            </tr>
+                        )
+                    })
+                }
+            </tbody>
+         </table> */}
+
+      
 
 
-      {/* 8. unshift :-  */}
-        {/* <div> <b>Unshift :-</b> {un}</div> */}
 
 
-      {/* 9. indexOf :-  */}
-        {/* <div> <b>Index of :-</b> {inx}</div> */}
 
-
-      {/* 10. toString :-  */}
-        {/* <div> <b>Array to String Convert :-</b> {str}</div> */}
-
-
-      {/* 11. slice :-  */}
-        {/* <div> <b>Slice :-</b> {slc}</div>
-        <div> <b>Slice / join :-</b> {slc,join}</div> */}
-
-
-      {/* 13. map :-  */}
-        {/* <div> 
-            <b>Map :-</b>
-            {
-                arr.map((i)=>{
-                    // return <div> {i} </div>
-                    // return <div> {i * 2} </div>   // multipication 
-                    // return <div> {i * 6} </div>   // 6-table print  
-                })
-            }
-        </div> */}
-
-
-      {/* 15. filter :-  */}
-        {/* <div> 
-            <b>Filter :-</b>
-            {
-                arr.filter((i)=> i>20).map((i)=>{
-                    // return <div> {i} </div>
-                    // return <div> {i * 2} </div>   // multipication (i>0)
-                    // return <div> {i * 6} </div>   // 6-table print (i>0) 
-                    // return <div> {i} </div>    // Even number (i>0 && i%2==0)
-                    // return <div> {i} </div>    // Odd number (i>0 && i%2==1)
-                })
-            }
-        </div> */}
-
-    
 
     </div>
   );
