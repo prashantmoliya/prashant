@@ -1,55 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
 
- // 15-02-23/ Wednesday
-    // -Array and Object Intro
-    // -Available Methods
+ // 16-02-23/ Thursday
+    // -Map and Key
+    // -Filter and reduce
+
+    // Using this day(-filter / -includes / -reduce)
 
 function App() {
 
- // 1- table (employee list student / map (-simple function))
+ // 1- Filter 
 
     // const list= [
-    //     {
-    //         id : "2301",
-    //         name : "Nayan",
-    //         mobile : "9987563250",
-    //         higher_secondary : "true",
-    //         degree : "true",
-    //         color : "blue",
-    //     },
-    //     {
-    //         id : "2302",
-    //         name : "Om",
-    //         mobile : "8000753080",
-    //         higher_secondary : "false",
-    //         degree : "false",
-    //         color : "black",
-    //     },
     //     {
     //         id : "2303",
-    //         name : "Prashant",
-    //         mobile : "7984385230",
-    //         higher_secondary : "true",
-    //         degree : "true",
-    //         color : "red",
+    //         name : "Mouse",
+    //         description : "Mouse is computer fast work.",
+    //         quantity : 2,
+    //         price : 600,
     //     },
-    //     {
-    //         id : "2304",
-    //         name : "Radhe",
-    //         mobile : "8568563285",
-    //         higher_secondary : "false",
-    //         degree : "true",
-    //         color : "blue",
-    //     },
-    //     {
-    //         id : "2305",
-    //         name : "Dhruv",
-    //         mobile : "9722552187",
-    //         higher_secondary : "true",
-    //         degree : "false",
-    //         color : "white",
-    //     },
+    //     { id : "2153", name : "Vefar", description : "Poteto Vefar balaji fever.", quantity : 5, price : 20, },
+    //     { id : "5623", name : "volyboll", description : "volyboll is smart ball.", quantity : 10, price : 700, },
+    //     { id : "7856", name : "Keyboard", description : "Key-board is tying process.", quantity : 10, price : 750, },
+    //     { id : "9564", name : "Vadapav", description : "Vadapav enjoy watching time movie.", quantity : 25, price : 100, },
+    //     { id : "0125", name : "Protocol", description : "Key-board protocol blue color.", quantity : 16, price : 200, },
+    //     { id : "9658", name : "Pendrive", description : "32GB Pendrive 1peice.", quantity : 8, price : 530, },
     // ];
 
     // console.log("List++", list);
@@ -57,260 +32,280 @@ function App() {
 
 
 
- // 2- table (higher_secondary & degree object (1), color Array (2))
-
-  // method-1 (higher_secondary & degree object (-if-else condition)) 
-
-    // const list= [
-    //     { 
-    //         id : "1132", 
-    //         name : "Mehul",
-    //         mobile : "9978562356",
-    //         study : {
-    //             higher_secondary : false,
-    //             degree : true,
-    //         },
-    //         color : "red",
-    //     },
-    //     { id : "2391", name : "Rahul", mobile : "895632147", study : { higher_secondary : true, degree : false, }, color : "blue", },
-    //     { id : "3545", name : "Lokesh", mobile : "9512476375", study : { higher_secondary : true, degree : true, }, color : "red", },
-    //     { id : "9879", name : "Karan", mobile : "8756321492", study : { higher_secondary : false, degree : true, }, color : "black", },
-    //     { id : "6577", name : "Raj", mobile : "9163254785", study : { higher_secondary : true, degree : true, }, color : "red", },
-    //     { id : "4353", name : "Naman", mobile : "9045678325", study : { higher_secondary : false, degree : false, }, color : "red", },
-    // ];
-
-    // console.log("List++", list);
-
-
-
-  // method-2 (color Array (-map / if-else condition)) 
-
-    // const list= [
-    //     { 
-    //         id : "1132", 
-    //         name : "Mehul",
-    //         mobile : "9978562356",
-    //         higher_secondary : "No",
-    //         degree : "Yes",
-    //         color : [
-    //             {
-    //                 red : true,
-    //                 blue : true,
-    //                 black : true,   
-    //                 white : true
-    //             }
-    //         ],
-    //     },
-    //     { id : "2391", name : "Rahul", mobile : "895632147", higher_secondary : "Yes", degree : "No", color : [{ red : false, blue : true, black : true, white : true }], },
-    //     { id : "3545", name : "Lokesh", mobile : "9512476375", higher_secondary : "Yes", degree : "Yes", color : [{ red : true, blue : false, black : true, white : true }], },
-    //     { id : "9879", name : "Karan", mobile : "8756321492", higher_secondary : "No", degree : "Yes", color : [{ red : true, blue : true, black : false, white : false }], },
-    //     { id : "6577", name : "Raj", mobile : "9163254785", higher_secondary : "Yes", degree : "Yes", color : [{ red : false, blue : true, black : true, white : true }], },
-    //     { id : "4353", name : "Naman", mobile : "9045678325", higher_secondary : "No", degree : "No", color : [{ red : false, blue : false, black : true, white : true }], },
-    // ];
-
-    // console.log("List++", list);
-
-
-
-
- // 3- table (higher_secondary & degree object // color Array (-if-else condition // -map / if-else condition)) 
+ // 2- includes
 
     // const list= [
     //     {
-    //         id : "2309",
-    //         name : "naman",
-    //         mobile : "896523147",
-    //         study : {
-    //             higher_secondary : true,
-    //             degree : false,
-    //         },
-    //         color : [
-    //             {
-    //                 red : true,
-    //                 blue : true,
-    //                 black : true,
-    //                 white : true
-    //             }
-    //         ],
+    //         id : "2303",
+    //         name : "Mouse",
+    //         description : "Mouse is computer fast work.",
+    //         quantity : 2,
+    //         price : 600,
     //     },
-    //     { id : "5896", name : "manan", mobile : "785412369", study : { higher_secondary : true , degree : true, }, color : [{ red : false, blue : true, black : true, white : true }], },
-    //     { id : "2335", name : "naimish", mobile : "658932147", study : { higher_secondary : false , degree : false, }, color : [{ red : true, blue : false, black : true, white : true }], },
-    //     { id : "5645", name : "kavan", mobile : "963258741", study : { higher_secondary : false , degree : true, }, color : [{ red : true, blue : true, black : false, white : true }], },
-    //     { id : "2314", name : "karan", mobile : "951235478", study : { higher_secondary : true , degree : false, }, color : [{ red : false, blue : false, black : true, white : true }], },
-    //     { id : "8976", name : "raj", mobile : "874569321", study : { higher_secondary : false , degree : true, }, color : [{ red : false, blue : true, black : true, white : true }], },
+    //     { id : "2153", name : "Vefar", description : "Poteto Vefar balaji fever.", quantity : 5, price : 20, },
+    //     { id : "5623", name : "volyboll", description : "volyboll is smart ball.", quantity : 10, price : 700, },
+    //     { id : "7856", name : "Keyboard", description : "Key-board is tying process.", quantity : 10, price : 750, },
+    //     { id : "9564", name : "Vadapav", description : "Vadapav enjoy watching time movie.", quantity : 25, price : 100, },
+    //     { id : "0125", name : "Protocol", description : "Key-board protocol blue color.", quantity : 16, price : 200, },
+    //     { id : "9658", name : "Pendrive", description : "32GB Pendrive 1peice.", quantity : 8, price : 530, },
     // ];
 
     // console.log("List++", list);
 
 
-       
+
+
+ // 3- reduce
+
+  // method-1 (simple reduce)
+
+    // const list= [
+    //     {
+    //         id : "2303",
+    //         name : "Mouse",
+    //         description : "Mouse is computer fast work.",
+    //         quantity : 2,
+    //         price : 600,
+    //     },
+    //     { id : "2153", name : "Vefar", description : "Poteto Vefar balaji fever.", quantity : 5, price : 20, },
+    //     { id : "5623", name : "volyboll", description : "volyboll is smart ball.", quantity : 10, price : 700, },
+    //     { id : "7856", name : "Keyboard", description : "Key-board is tying process.", quantity : 10, price : 750, },
+    //     { id : "9564", name : "Vadapav", description : "Vadapav enjoy watching time movie.", quantity : 25, price : 100, },
+    //     { id : "0125", name : "Protocol", description : "Key-board protocol blue color.", quantity : 16, price : 200, },
+    //     { id : "9658", name : "Pendrive", description : "32GB Pendrive 1peice.", quantity : 8, price : 530, },
+    // ];
+
+    // console.log("List++", list);
+
+    // const totalquantity= list.reduce((acc,curr)=>{
+    //     return acc + curr.quantity
+    // },0)
+
+    // const totalprice= list.reduce((acc,curr)=>{
+    //     return acc + curr.price
+    // },0)
+
+    // const total= list.reduce((acc,curr)=>{
+    //     return acc + curr.quantity * curr.price
+    // },0)
+
+
+
+  // method-2 (filter & reduce mix)
+
+    // const list= [
+    //     {
+    //         id : "2303",
+    //         name : "Mouse",
+    //         description : "Mouse is computer fast work.",
+    //         quantity : 2,
+    //         price : 600,
+    //     },
+    //     { id : "2153", name : "Vefar", description : "Poteto Vefar balaji fever.", quantity : 5, price : 20, },
+    //     { id : "5623", name : "volyboll", description : "volyboll is smart ball.", quantity : 10, price : 700, },
+    //     { id : "7856", name : "Keyboard", description : "Key-board is tying process.", quantity : 10, price : 750, },
+    //     { id : "9564", name : "Vadapav", description : "Vadapav enjoy watching time movie.", quantity : 25, price : 100, },
+    //     { id : "0125", name : "Protocol", description : "Key-board protocol blue color.", quantity : 16, price : 200, },
+    //     { id : "9658", name : "Pendrive", description : "32GB Pendrive 1peice.", quantity : 8, price : 530, },
+    // ];
+
+    // console.log("List++", list);
+
+    // const a= list.filter((i)=> i.quantity > 3)    //(method 1 - qty)
+    // // const a= list.filter((i)=> i.quantity > 3 && i.quantity < 20)    //(method 2 - qty)
+    // // const a= list.filter((i)=> i.price > 500)    //(method 3 - price)
+    // // const a= list.filter((i)=> i.price >= 50 && i.price <= 600)    //(method 4 - price)
+
+    // const totalquantity= a.reduce((acc,curr)=>{
+    //     return acc + curr.quantity
+    // },0)
+
+    // const totalprice= a.reduce((acc,curr)=>{
+    //     return acc + curr.price
+    // },0)
+
+    // const total= a.reduce((acc,curr)=>{
+    //     return acc + curr.quantity * curr.price
+    // },0)
+
+
+
 
   return (
     <div className="App">
 
-    {/* 1. table (employee list student / map (-simple function)) */}
+    {/* 1. Filter */}
 
-         {/* <h2>Employee List Student </h2>
-
+         {/* <h2>Product List</h2>
+ 
          <table>
-            <thead>
-                <tr>
-                    <td> <b>Sr no.</b> </td>
-                    <td> <b>Id</b> </td>
-                    <td> <b>Full Name</b> </td>
-                    <td> <b>Mobile Number</b> </td>
-                    <td> <b>Higher Secondary</b> </td>
-                    <td> <b>Graduation</b> </td>
-                    <td> <b>Color</b> </td>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    list.map((i,index)=>{
-                        return(
-                            <tr>
-                                <td> {index + 1+"."} </td>
-                                <td> {i.id} </td>
-                                <td> {i.name} </td>
-                                <td> {i.mobile} </td>
-                                <td> {i.higher_secondary} </td>
-                                <td> {i.degree} </td>
-                                <td> {i.color} </td>
-                            </tr>
-                        )
-                    })
-                }
-            </tbody>
+             <thead>
+                 <tr>
+                     <td>Sr no.</td>
+                     <td>Id</td>
+                     <td>Product Name</td>
+                     <td>Description</td>
+                     <td>Quantity</td>
+                     <td>Price</td>
+                 </tr>
+             </thead>
+             <tbody>
+                 {
+                     list.filter((i)=> i.quantity > 3).map((i,index)=>{    //(method 1 - qty)
+                     // list.filter((i)=> i.quantity > 3 && i.quantity < 20).map((i,index)=>{    //(method 2 - qty)
+                     // list.filter((i)=> i.price > 500).map((i,index)=>{    //(method 3 - price)
+                     // list.filter((i)=> i.price >= 50 && i.price <= 600).map((i,index)=>{    //(method 4 - price)
+                         return(
+                             <tr>
+                                 <td> <b>{index + 1+"."}</b> </td>
+                                 <td> {i.id} </td>
+                                 <td> {i.name} </td>
+                                 <td> {i.description} </td>
+                                 <td> {i.quantity} </td>
+                                 <td> {i.price} </td>
+                             </tr>
+                         )
+                     })
+                 }
+             </tbody>
          </table> */}
 
 
 
 
-    {/* 2. table (higher_secondary & degree object (1), color Array (2)) */}
+    {/* 2. includes */}
 
-       {/* method-1 (higher_secondary & degree object (-if-else condition)) */}
-
-         {/* <h2>Employee List Student</h2>
-
+         {/* <h2>Product List</h2>
+ 
          <table>
-            <thead>
-                <tr>
-                    <td> <b>Sr no.</b> </td>
-                    <td> <b>Id</b> </td>
-                    <td> <b>Full Name</b> </td>
-                    <td> <b>Mobile Number</b> </td>
-                    <td> <b>Higher Secondary</b> </td>
-                    <td> <b>Graduation</b> </td>
-                    <td> <b>Color</b> </td>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    list.map((i,index)=>{
-                        return(
-                            <tr>
-                                <td> {index + 1+"."} </td>
-                                <td> {i.id} </td>
-                                <td> {i.name} </td>
-                                <td> {i.mobile} </td>
-                                <td> {i?.study?.higher_secondary === true ? 'Yes' : 'No'} </td>
-                                <td> {i?.study?.degree === false ? 'No' : 'Yes'} </td>
-                                <td> {i.color} </td>
-                            </tr>
-                        )
-                    })
-                }
-            </tbody>
+             <thead>
+                 <tr>
+                     <td>Sr no.</td>
+                     <td>Id</td>
+                     <td>Product Name</td>
+                     <td>Description</td>
+                     <td>Quantity</td>
+                     <td>Price</td>
+                 </tr>
+             </thead>
+             <tbody>
+                 {
+                     list.filter((i)=> i.id.includes('9')).map((i,index)=>{    //(method 1 - id)
+                     // list.filter((i)=> i.name.includes('P')).map((i,index)=>{    //(method 2 - name)
+                     // list.filter((i)=> i.description.includes('32')).map((i,index)=>{    //(method 3 - description)
+                         return(
+                             <tr>
+                                 <td> <b>{index + 1+"."}</b> </td>
+                                 <td> {i.id} </td>
+                                 <td> {i.name} </td>
+                                 <td> {i.description} </td>
+                                 <td> {i.quantity} </td>
+                                 <td> {i.price} </td>
+                             </tr>
+                         )
+                     })
+                 }
+             </tbody>
          </table> */}
+
+
+
+
+    {/* 3. reduce */}
+
+       {/* method-1 (simple reduce) */}
+
+         {/* <h2>Product List</h2>
+ 
+         <table>
+             <thead>
+                 <tr>
+                     <td>Sr no.</td>
+                     <td>Id</td>
+                     <td>Product Name</td>
+                     <td>Description</td>
+                     <td>Quantity</td>
+                     <td>Price</td>
+                     <td>Total</td>
+                 </tr>
+             </thead>
+             <tbody>
+                 {
+                     list.map((i,index)=>{    
+                         return(
+                             <tr>
+                                 <td> <b>{index + 1+"."}</b> </td>
+                                 <td> {i.id} </td>
+                                 <td> {i.name} </td>
+                                 <td> {i.description} </td>
+                                 <td> {i.quantity} </td>
+                                 <td> {i.price} </td>
+                                 <td> <b>{i.quantity * i.price}</b> </td>
+                             </tr>
+                         )
+                     })
+                 }
+                 <tr>
+                    <td colSpan={2}> <b>Total</b> </td>
+                    <td> <b>-</b> </td>
+                    <td> <b>-</b> </td>
+                    <td> <b>{totalquantity}</b> </td>
+                    <td> <b>{totalprice}</b> </td>
+                    <td> <b>{total}</b> </td>
+                 </tr>
+             </tbody>
+         </table> */}
+
+
+
+       {/* method-2 (filter & reduce mix) */}
+
+         {/* <h2>Product List</h2>
+ 
+         <table>
+             <thead>
+                 <tr>
+                     <td>Sr no.</td>
+                     <td>Id</td>
+                     <td>Product Name</td>
+                     <td>Description</td>
+                     <td>Quantity</td>
+                     <td>Price</td>
+                     <td>Total</td>
+                 </tr>
+             </thead>
+             <tbody>
+                 {
+                     list.filter((i)=> i.quantity > 3).map((i,index)=>{    //(method 1 - qty)   
+                     // list.filter((i)=> i.quantity > 3 && i.quantity < 20).map((i,index)=>{    //(method 2 - qty)  
+                     // list.filter((i)=> i.price > 500).map((i,index)=>{    //(method 3 - price) 
+                     // list.filter((i)=> i.price >= 50 && i.price <= 600).map((i,index)=>{    //(method 4 - price) 
+                         return(
+                             <tr>
+                                 <td> <b>{index + 1+"."}</b> </td>
+                                 <td> {i.id} </td>
+                                 <td> {i.name} </td>
+                                 <td> {i.description} </td>
+                                 <td> {i.quantity} </td>
+                                 <td> {i.price} </td>
+                                 <td> <b>{i.quantity * i.price}</b> </td>
+                             </tr>
+                         )
+                     })
+                 }
+                 <tr>
+                    <td colSpan={2}> <b>Total</b> </td>
+                    <td> <b>-</b> </td>
+                    <td> <b>-</b> </td>
+                    <td> <b>{totalquantity}</b> </td>
+                    <td> <b>{totalprice}</b> </td>
+                    <td> <b>{total}</b> </td>
+                 </tr>
+             </tbody>
+         </table> */}
+
+
          
-
-
-       {/* method-2 (color Array (-map / if-else condition)) */}
-
-         {/* <h2>Employee List Student</h2>
-
-         <table>
-            <thead>
-                <tr>
-                    <td> <b>Sr no.</b> </td>
-                    <td> <b>Id</b> </td>
-                    <td> <b>Full Name</b> </td>
-                    <td> <b>Mobile Number</b> </td>
-                    <td> <b>Higher Secondary</b> </td>
-                    <td> <b>Graduation</b> </td>
-                    <td> <b>Color</b> </td>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    list.map((i,index)=>{
-                        return(
-                            <tr>
-                                <td> {index + 1+"."} </td>
-                                <td> {i.id} </td>
-                                <td> {i.name} </td>
-                                <td> {i.mobile} </td>
-                                <td> {i.higher_secondary} </td>
-                                <td> {i.degree} </td>
-                                <td> 
-                                    {i?.color.map((c)=> <span>{ c.red === true ? 'red , ' : ''}</span>)}
-                                    {i?.color.map((c)=> <span>{ c.blue === true ? 'blue , ' : ''}</span>)}
-                                    {i?.color.map((c)=> <span>{ c.black === true ? 'black , ' : ''}</span>)}
-                                    {i?.color.map((c)=> <span>{ c.white === true ? 'white' : ''}</span>)}
-                                </td>
-                            </tr>
-                        )
-                    })
-                }
-            </tbody>
-         </table> */}
-
-
-
-
-    {/* 3. table (higher_secondary & degree object // color Array (-if-else condition // -map / if-else condition)) */}
-
-
-         {/* <h2>Employee List Student</h2>
-
-         <table>
-            <thead>
-                <tr>
-                    <td>Sr no.</td>
-                    <td>Id</td>
-                    <td>Full Name</td>
-                    <td>Mobile Number</td>
-                    <td>Higher Secondary</td>
-                    <td>Graduation</td>
-                    <td>Color</td>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    list.map((i,index)=>{
-                        return(
-                            <tr>
-                                <td> {index + 1+"."} </td>
-                                <td> {i.id} </td>
-                                <td> {i.name} </td>
-                                <td> {i.mobile} </td>
-                                <td> {i?.study?.higher_secondary === true ? 'Yes' : 'No'} </td>
-                                <td> {i?.study?.degree === false ? 'No' : 'Yes'} </td>
-                                <td> 
-                                    {i?.color?.map((c)=> <span>{ c.red === true ? 'red , ' : ''}</span>)} 
-                                    {i?.color?.map((c)=> <span>{ c.blue === true ? 'blue , ' : ''}</span>)} 
-                                    {i?.color?.map((c)=> <span>{ c.black === true ? 'black , ' : ''}</span>)} 
-                                    {i?.color?.map((c)=> <span>{ c.white === true ? 'white' : ''}</span>)} 
-                                </td>
-                            </tr>
-                        )
-                    })
-                }
-            </tbody>
-         </table> */}
-
-
-
     </div>
   );
 }
