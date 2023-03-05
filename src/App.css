@@ -37,16 +37,31 @@
   }
 }
 
+
+table{
+  width: 60%;
+}
+.a{
+  width: 1%;
+}
+.b{
+  width: 10%;
+}
+thead{
+  font-weight: bold;
+}
 table,  
 tr, 
 td{
   margin: auto;
-  margin-top: 20px;
-  border: 1px solid #000;
-  border-collapse: collapse; 
+  border: 2px solid #ff8800;
+  border-collapse: collapse;
+}
+.a1{
+  background-color: #FAF0DD;
+}
+.a2{
+  color: rgb(195 1 1);
 }
 
-thead{
-  font-weight: bold;
-}
 
