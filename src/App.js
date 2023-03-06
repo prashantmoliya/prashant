@@ -1,160 +1,73 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header.js';    // 3- Rendering Elements (new file)
 
   // 20-02-23/ Monday
-    // Project-1 :- circlet
+    // -Understand directory structure
+    // -Introduction of jsx
+    // -Rendering Elements
 
 function App() {
 
-    const result=[
-        {
-            subject : "Science",
-            total_external : 80,
-            total_internal : 20,
-            marks_external : 69,
-            marks_internal : 14,
-        },
-        {
-            subject : "Maths",
-            total_external : 80,
-            total_internal : 20,
-            marks_external : 60,
-            marks_internal : 12,
-        },
-        {
-            subject : "S.S.",
-            total_external : 80,
-            total_internal : 20,
-            marks_external : 56,
-            marks_internal : 10,
-        },
-        {
-            subject : "English",
-            total_external : 80,
-            total_internal : 20,
-            marks_external : 65,
-            marks_internal : 16,
-        },
-        {
-            subject : "Gujarati ",
-            total_external : 80,    
-            total_internal : 20,
-            marks_external : 70,
-            marks_internal : 12,
-        },
-        {
-            subject : "Sanskrit ",
-            total_external : 80,
-            total_internal : 20,
-            marks_external : 75,
-            marks_internal : 18,
-        },
-    ];
+ // 1- Understand directory structure (Thiyri)
 
-    console.log("Result++", result);
-
-    const a= result.filter((i)=> (i.marks_external+i.marks_internal >= 33) && (i.marks_external+i.marks_internal <= 100))
-
-    const totalexternal= a.reduce((acc,curr)=>{
-        return acc + curr.total_external
-    },0)
-
-    const totalinternal= a.reduce((acc,curr)=>{
-        return acc + curr.total_internal
-    },0)
-
-    const markexternal= a.reduce((acc,curr)=>{
-        return acc + curr.marks_external
-    },0)
-
-    const markinternal= a.reduce((acc,curr)=>{
-        return acc + curr.marks_internal
-    },0)
-
-    const total= a.reduce((acc,curr)=>{
-        return acc + (curr.marks_external + curr.marks_internal)
-    },0)
-
-    const Percentage= a.reduce((acc,curr)=>{
-        return acc + ((curr.marks_external +  curr.marks_internal) / 600 * 100)
-    },0)
+    // -import / export different (Imp) (All file ma use kevi thay and new file ma kai rite karvo.)
 
 
 
 
+ // 2- Introduction of jsx (Thiyri)
+
+    // (Full Form) JSX :- Javascript XML 
+    
+    // -index.html / index.js (bey file ma javascript ni id (root) kevi rite work kare ae explain / index.html ma id (root) aeno datatype index.js ni file ma meaning ae process backend thay. browswer page ma inspect kri html no code batavse but datatype nai batave.(backend process))
+
+
+
+
+ // 3- Rendering Elements (new file)
+ 
+    // -new file create kri tyare link kevi rite karavi (2 js ni file App.js/(Header.js (new file)) ek ma use kevi rite karvi / meaning code alag-alag file ma header no header.js ma footer no footer.js ma. browser ma show App.js thi j thay. all file nu code App.js ma kai rite levu.)
+
+    // -new file create kri tyare pela vs-code ma (Extensions) jai (ES7 All install) karva
+
+    // -new file create after
+        // -ES7 All install
+        // -Search :- (rafc / rcc)
+                     // -function components
+                     // -class components
+
+    // -(App.js) :-
+
+        // import Header from './Header.js';
+
+        // <Header /> (return ni niche pela / element name import ma rakhi aej rakhvanu)
+
+
+
+        
   return (
-    <div className="App">
+    <div className="App">    
 
-        <h1 className='a2'>Student Marksheet</h1>
+    {/* 1. Understand directory structure */}
 
-        <table>
-            <thead className='a1 a2'>
-                <tr>
-                    <td>Sr no.</td>
-                    <td>Subject</td>
-                    <td>
-                        Total Marks
-                        <tr>
-                                <td className='a'>External</td>
-                                <td className='a'>Internal</td>
-                        </tr>
-                    </td>
-                    <td>
-                        Marks obtained
-                        <tr>
-                            <td className='a'>External</td>
-                            <td className='a'>Internal</td>
-                        </tr>
-                    </td>
-                    <td>Total </td>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    result.filter((i)=> (i.marks_external+i.marks_internal >= 33) && (i.marks_external+i.marks_internal <= 100)).map((i,index)=>{
-                        return(
-                            <tr>
-                                <td> {index + 1+"."} </td>
-                                <td> {i.subject} </td>
-                                <td>
-                                    <tr>
-                                        <td className='a'> {i.total_external} </td>
-                                        <td className='a'> {i.total_internal} </td>
-                                    </tr>
-                                </td>
-                                <td>
-                                    <tr>
-                                        <td className='a'> {i.marks_external} </td>
-                                        <td className='a'> {i.marks_internal} </td>
-                                    </tr>
-                                </td>
-                                <td > <b>{i.marks_external + i.marks_internal}</b> </td>
-                            </tr>
-                        )
-                    })
-                }
-                <tr className='a1'>
-                    <td className='a2' colSpan={2}> <b>Total</b> </td>
-                    <td>
-                        <tr>
-                            <td className='a'> <b>{totalexternal}</b> </td>
-                            <td className='a'> <b>{totalinternal}</b> </td>
-                        </tr>
-                    </td>
-                    <td>
-                        <tr>
-                            <td className='b'> <b>{markexternal}</b> </td>
-                            <td className='b'> <b>{markinternal}</b> </td>
-                        </tr>
-                    </td>
-                    <td> <b>{total}</b> </td>
-                </tr>
-                <tr className='a1'>
-                    <td className='a2' colSpan={3}> <b>Percentage</b> </td>
-                    <td colSpan={2}> <b>{Percentage}%</b> </td>
-                </tr>
-            </tbody>
-        </table>
+         {/* -Thiyri */} 
+                      
+
+
+    {/* 2. Introduction of jsx */}
+
+         {/* -Thiyri */} 
+
+
+
+    {/* 3. Rendering Elements */}
+
+         {/* -new file (Header.js) */} 
+         
+         <Header />
+
+
 
     </div>
   );

@@ -37,31 +37,44 @@
   }
 }
 
+/* 1. App.js (no aply) */
 
-table{
-  width: 60%;
-}
-.a{
-  width: 1%;
-}
-.b{
-  width: 10%;
-}
-thead{
-  font-weight: bold;
-}
 table,  
 tr, 
 td{
   margin: auto;
-  border: 2px solid #ff8800;
-  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #000;
+  border-collapse: collapse; 
 }
-.a1{
-  background-color: #FAF0DD;
+
+thead{
+  font-weight: bold;
 }
-.a2{
-  color: rgb(195 1 1);
+
+/* 2. Header.js */
+
+.logo{
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+nav, ul{
+  margin: 5px;
+  list-style: none; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul, li{
+  margin: 10px;
+  padding: 0 14px 0 14px;
+  font-size: 17px;
+}
+ul, li:first-child{
+  padding-left: 0px;
 }
 
 
