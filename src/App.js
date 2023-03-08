@@ -1,47 +1,59 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './Header.js';    // 3- Rendering Elements (new file)
+import Header from './Header';    
+import Product from './Product';    // 1- Nested Elements (new file)
+import Footer from './Footer';    // 1- Nested Elements (new file)
 
-  // 20-02-23/ Monday
-    // -Understand directory structure
-    // -Introduction of jsx
-    // -Rendering Elements
+  // 21-02-23/ Tuesday
+    // -Nested Elements
+    // -Attributes
+    // -Comments
 
 function App() {
 
- // 1- Understand directory structure (Thiyri)
+ // 1- Nested Elements
 
-    // -import / export different (Imp) (All file ma use kevi thay and new file ma kai rite karvo.)
+    // -Defination :-
+                    // In React, we can nest components inside within one another. This helps in creating more complex User Interfaces. The components that are nested inside (parent components) are called (child components). (Import and Export) keywords facilitate nesting of the components.
+
+                    // -પ્રતિક્રિયામાં, આપણે એક બીજાની અંદર ઘટકોને માળો બનાવી શકીએ છીએ. આ વધુ જટિલ યુઝર ઇન્ટરફેસ બનાવવામાં મદદ કરે છે. ઘટકો કે જે (પિતૃ ઘટકો)ની અંદર માળખામાં હોય છે તેને (બાળ ઘટકો) કહેવામાં આવે છે. (આયાત અને નિકાસ) કીવર્ડ્સ ઘટકોના માળખાને સરળ બનાવે છે.
+
+    // -Nested Elements javascript na nested if statement ni jem ja work kare. 
+    // -Nested Elements ae parent components ni under child components banave. / child components ni under pacho child components banave. meaning App.js ae parent components and Header/Product/Footer.js ae child components and Footer.js ni under sociallink.js ae child components. (Nested Elements) 
+
+    // Example :-
+                // -Nested Elements
+
+      // App.js (parent components)
+          // Header.js (child components)
+          // Product.js (child components)
+          // Footer.js (child components)
+              // -SocialLink.js (child components)
+
+              
+
+
+ // 2- Attributes
+
+    // HTML ma (Attribute)
+            // -onclick
+            // -className
+            // -Id
+
+
+    // Example :-
+                // -javascript no function return ni upar ja lakhvo.
+
+    let demo = () =>{
+        console.log("hii how are you");
+    }
 
 
 
 
- // 2- Introduction of jsx (Thiyri)
+ // 3- Comments
 
-    // (Full Form) JSX :- Javascript XML 
-    
-    // -index.html / index.js (bey file ma javascript ni id (root) kevi rite work kare ae explain / index.html ma id (root) aeno datatype index.js ni file ma meaning ae process backend thay. browswer page ma inspect kri html no code batavse but datatype nai batave.(backend process))
-
-
-
-
- // 3- Rendering Elements (new file)
- 
-    // -new file create kri tyare link kevi rite karavi (2 js ni file App.js/(Header.js (new file)) ek ma use kevi rite karvi / meaning code alag-alag file ma header no header.js ma footer no footer.js ma. browser ma show App.js thi j thay. all file nu code App.js ma kai rite levu.)
-
-    // -new file create kri tyare pela vs-code ma (Extensions) jai (ES7 All install) karva
-
-    // -new file create after
-        // -ES7 All install
-        // -Search :- (rafc / rcc)
-                     // -function components
-                     // -class components
-
-    // -(App.js) :-
-
-        // import Header from './Header.js';
-
-        // <Header /> (return ni niche pela / element name import ma rakhi aej rakhvanu)
+    // - ------------------------ 
 
 
 
@@ -49,23 +61,26 @@ function App() {
   return (
     <div className="App">    
 
-    {/* 1. Understand directory structure */}
+    {/* 1. Nested Elements */}
 
-         {/* -Thiyri */} 
+        <Header />
+        <Product />
+        <Footer />
                       
 
 
-    {/* 2. Introduction of jsx */}
+    {/* 2. Attributes */}
 
-         {/* -Thiyri */} 
+        {/* -Example :- */} 
+
+         <button onClick={demo}>Click</button>
 
 
 
-    {/* 3. Rendering Elements */}
+    {/* 3. Comments */}
 
-         {/* -new file (Header.js) */} 
-         
-         <Header />
+        {/* ------------------------ */} 
+
 
 
 

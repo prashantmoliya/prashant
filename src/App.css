@@ -39,19 +39,6 @@
 
 /* 1. App.js (no aply) */
 
-table,  
-tr, 
-td{
-  margin: auto;
-  margin-top: 20px;
-  border: 1px solid #000;
-  border-collapse: collapse; 
-}
-
-thead{
-  font-weight: bold;
-}
-
 /* 2. Header.js */
 
 .logo{
@@ -66,6 +53,7 @@ nav, ul{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 95px;
 }
 
 ul, li{
@@ -76,5 +64,32 @@ ul, li{
 ul, li:first-child{
   padding-left: 0px;
 }
+
+/* 3. Product.js */
+
+table{
+  width: 50%;
+}
+
+table,
+tr,
+td{
+  margin: auto;
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+thead{
+  font-weight: bold; 
+}
+
+/* 4. Footer.js / SocialLink.js */
+
+.footer{
+  margin-top: 12%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 
 
