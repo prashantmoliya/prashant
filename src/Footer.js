@@ -1,13 +1,26 @@
 import React from 'react'
 import SocialLink from './SocialLink';
 
-const Footer = () => {
+const Footer = (props) => {
+
+    console.log("Footer(Props)++", props);
+
+
+
 
   return (
     <div className="App">
+        <div className='footer'>
 
-        <SocialLink />
+        {/* -Array and element string */}
 
+            <div>{props.Array2}</div>
+
+
+
+            <SocialLink />
+
+        </div> 
     </div>
   );
 }

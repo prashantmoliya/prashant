@@ -5,7 +5,7 @@ const SocialLink = () => {
   return (
     <div className="App">
 
-        <div className='footer'>
+        <div className='f1'>
             <div>Instagram</div>
             <div>Google</div>
             <div>Facebook</div>

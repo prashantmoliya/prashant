@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Product = () => {
+const Product = (props) => {
+
+    console.log("Product(Props)++", props);
+
 
     const product= [
         {
@@ -19,9 +22,21 @@ const Product = () => {
     ];
 
     console.log("Product++", product);
+
+
     
+
   return (
     <div className="App">
+
+    {/* -single Object */}
+    
+        <div>
+           {props.Object.name}, 
+           {props.Object.email}
+        </div>
+
+
 
          <h2>Product List</h2>
  

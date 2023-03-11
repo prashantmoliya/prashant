@@ -86,7 +86,10 @@ thead{
 /* 4. Footer.js / SocialLink.js */
 
 .footer{
-  margin-top: 12%;
+  margin-top: 10%;
+}
+
+.f1{
   display: flex;
   justify-content: space-evenly;
 }

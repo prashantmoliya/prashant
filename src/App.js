@@ -1,86 +1,93 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header';    
-import Product from './Product';    // 1- Nested Elements (new file)
-import Footer from './Footer';    // 1- Nested Elements (new file)
+import Product from './Product';    
+import Footer from './Footer';    
 
-  // 21-02-23/ Tuesday
-    // -Nested Elements
-    // -Attributes
-    // -Comments
+  // 22-02-23/ Wednesday
+    // -State
+    // -Props
 
 function App() {
 
- // 1- Nested Elements
+ // 1- State (Next day)
 
     // -Defination :-
-                    // In React, we can nest components inside within one another. This helps in creating more complex User Interfaces. The components that are nested inside (parent components) are called (child components). (Import and Export) keywords facilitate nesting of the components.
-
-                    // -પ્રતિક્રિયામાં, આપણે એક બીજાની અંદર ઘટકોને માળો બનાવી શકીએ છીએ. આ વધુ જટિલ યુઝર ઇન્ટરફેસ બનાવવામાં મદદ કરે છે. ઘટકો કે જે (પિતૃ ઘટકો)ની અંદર માળખામાં હોય છે તેને (બાળ ઘટકો) કહેવામાં આવે છે. (આયાત અને નિકાસ) કીવર્ડ્સ ઘટકોના માળખાને સરળ બનાવે છે.
-
-    // -Nested Elements javascript na nested if statement ni jem ja work kare. 
-    // -Nested Elements ae parent components ni under child components banave. / child components ni under pacho child components banave. meaning App.js ae parent components and Header/Product/Footer.js ae child components and Footer.js ni under sociallink.js ae child components. (Nested Elements) 
-
-    // Example :-
-                // -Nested Elements
-
-      // App.js (parent components)
-          // Header.js (child components)
-          // Product.js (child components)
-          // Footer.js (child components)
-              // -SocialLink.js (child components)
-
-              
-
-
- // 2- Attributes
-
-    // HTML ma (Attribute)
-            // -onclick
-            // -className
-            // -Id
-
-
-    // Example :-
-                // -javascript no function return ni upar ja lakhvo.
-
-    let demo = () =>{
-        console.log("hii how are you");
-    }
+                    // Variable ni value ne update karavse.
+                    // React ma Ui ma value update karva maate "State" no use thay.
 
 
 
 
- // 3- Comments
+ // 2- Props 
 
-    // - ------------------------ 
+    // (Full Form) Props :- Property
+
+    // -Defination :-
+                    // Koi aek components ma value malti hoy ane tene children components ma value joti hoy tyare "Props" no use thay.
+
+    // -(main mathi children ma data pass karva.)
 
 
 
+  //1- Header.js
+    // step-1 single element string
+
+        const element= "Prakash";
+    
+    // step-2 Array and multiple Object
+
+        const array1= [{
+            name : "Mehul",
+            email : "Mehul@gmail.com",
+            phone : "1234562",
+        },
+        {
+            name : "Naman",
+            email : "Naman@gmail.com",
+            phone : "5632148",
+        },
+        {
+            name : "Rahul",
+            email : "Rahul@gmail.com",
+            phone : "4567891",
+        },{
+            name : "Manan",
+            email : "Manan@gmail.com",
+            phone : "8589631",
+        },
+        ];
+
+
+  //2- Product.js
+    // -single Object
+
+        const object= {
+            name : "Prakash",
+            email : "Prakhsh@gmail.com",
+        };
+
+        
+  //3- Footer.js
+    // -Array and element string
+
+        const array2= ['Instagram','Google','Facebook','WhatsApp'];
+
+
+  
         
   return (
     <div className="App">    
 
-    {/* 1. Nested Elements */}
+    {/* 1. State */}
 
-        <Header />
-        <Product />
-        <Footer />
-                      
+        
+                     
+    {/* 2. Props */}
 
-
-    {/* 2. Attributes */}
-
-        {/* -Example :- */} 
-
-         <button onClick={demo}>Click</button>
-
-
-
-    {/* 3. Comments */}
-
-        {/* ------------------------ */} 
-
+        <Header Element={element} Array1={array1} />    {/* single element string / Array and multiple Object */}
+        <Product Object={object} />    {/* single Object */}
+        <Footer Array2={array2} />    {/* Array and element string */}
 
 
 
