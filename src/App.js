@@ -1,41 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './Header';    
-import Product from './Product';    
-import Footer from './Footer';    
+// import Header from './Header';    
+import Product from './Product';    // 1- Function Components
+import Product_ClassComponents from './Product_ClassComponents';    // 2- Class Components 
+// import Footer from './Footer';    
 
-  // 22-02-23/ Wednesday
-    // -State
-    // -Props
+  // 23-02-23/ Thursday
+    // -Function Components
+    // -Class Components
 
 function App() {
 
- // 1- State (Next day)
+ // 1- Function Components
 
-    // -Defination :-
-                    // Variable ni value ne update karavse.
-                    // React ma Ui ma value update karva maate "State" no use thay.
+    // -rafc
+    // -(Full Form) rafc :- React Arrow Function Components 
 
-
-
-
- // 2- Props 
-
-    // (Full Form) Props :- Property
-
-    // -Defination :-
-                    // Koi aek components ma value malti hoy ane tene children components ma value joti hoy tyare "Props" no use thay.
-
-    // -(main mathi children ma data pass karva.)
+    // -atyar sudhi all js ni file ma function components no use karta hta.
 
 
 
-  //1- Header.js
+
+ // 2- Class Components 
+
+    // -rcc
+    // -(Full Form) rcc :- React Class Components 
+
+    // -class components ma render() ni upar const,let,var no use thase nhi (let demo= "admin1"). tema sidhu variable name (demo= "admin1";) no use thase.
+    // -(const,var,let) ne badle (this.__) method use thase. 
+
+
+
+
+
+
+  // 1- / 2-  Product.js / Product_ClassComponents.js (Props thi)
     // step-1 single element string
 
         const element= "Prakash";
+
+    // step-2 single Object
+
+        const object= { 
+            name : "Mehul",
+            email : "Mehul@gmail.com",
+        };
     
-    // step-2 Array and multiple Object
+    // step-3 Array and multiple Object
 
         const array1= [{
             name : "Mehul",
@@ -58,18 +69,7 @@ function App() {
         },
         ];
 
-
-  //2- Product.js
-    // -single Object
-
-        const object= {
-            name : "Prakash",
-            email : "Prakhsh@gmail.com",
-        };
-
-        
-  //3- Footer.js
-    // -Array and element string
+    // step-4 Array and element string
 
         const array2= ['Instagram','Google','Facebook','WhatsApp'];
 
@@ -79,17 +79,28 @@ function App() {
   return (
     <div className="App">    
 
-    {/* 1. State */}
+  {/* (Props thi) /*}
+    {/* 1. Function Components */}
+
+        <Product Element={element} Object={object} Array1={array1} Array2={array2} />    
+
+
+    {/* 2. Class Components */}
+
+        <Product_ClassComponents Element={element} Object={object} Array1={array1} Array2={array2} />
+
+
+
+
+
+      
+    {/* (Props) */}
+
+        {/* <Header Element={element} Array1={array1} />    {/* single element string / Array and multiple Object */}
+        {/* <Product Object={object} />    {/* single Object */}
+        {/* <Footer Array2={array2} />    {/* Array and element string */}
 
         
-                     
-    {/* 2. Props */}
-
-        <Header Element={element} Array1={array1} />    {/* single element string / Array and multiple Object */}
-        <Product Object={object} />    {/* single Object */}
-        <Footer Array2={array2} />    {/* Array and element string */}
-
-
 
     </div>
   );
