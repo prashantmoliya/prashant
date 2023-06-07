@@ -1,72 +1,39 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = (props) => {
-
-    console.log("Header(Props)++", props);
-
+const Header = () => {
 
 
-
-  return (
-    <div className="App">
-
-    {/* step-1 single element string */}
-
-        <div>{props.Element}</div>
-
-    {/* step-2 Array and multiple Object */}
-
-      {/* -simple */}
-
+    return (
         <div>
-            {
-                props.Array1.map((i)=>{
-                    return <div>{i.name} / {i.email} / {i.phone}</div>
-                })
-            }
+
+            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target">
+                <div class="container">
+                    <Link to="/" class="navbar-brand fs-2 fw-bold">React</Link>
+
+                    <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="oi oi-menu"></span> Menu
+                    </button>
+
+                    <div class="me-5">
+                        <ul class="navbar-nav">
+                            <li class="nav-item "><Link to="/" class="nav-link">Home</Link></li>
+                            <li class="nav-item "><Link to="/Profile" class="nav-link">Profile</Link></li>
+                            <li class="nav-item "><Link to="/Information" class="nav-link">Information</Link></li>
+                            <li class="nav-item "><Link to="/About" class="nav-link">About</Link></li>
+                            <li class="nav-item "><Link to="/Service" class="nav-link">Service</Link></li>
+                            <li class="nav-item "><Link to="/Our_Services" class="nav-link">Our Services</Link></li>
+                            <li class="nav-item "><Link to="/Team" class="nav-link">Team</Link></li>
+                            <li class="nav-item "><Link to="/Pricing" class="nav-link">Pricing</Link></li>
+                            <li class="nav-item "><Link to="/Blog" class="nav-link">Blog</Link></li>
+                            <li class="nav-item "><Link to="/Contact" class="nav-link">Contact</Link></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
         </div>
-
-      {/* -table */}
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email Id</th>
-                    <th>Phone No.</th>
-                </tr>
-            </thead>
-            <tbody>
-                    {
-                        props.Array1.map((i)=>{
-                            return(
-                                <tr>
-                                    <td>{i.name}</td>
-                                    <td>{i.email}</td>
-                                    <td>{i.phone}</td>
-                                </tr>
-                            )
-                        })
-                    }
-            </tbody>
-        </table>
-        
-    
-
-        <nav>
-            <div className='logo'>React</div>
-
-            <ul>
-                <li>Home</li>
-                <li>React js</li>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Contact us</li>
-            </ul>
-        </nav>
-      
-    </div>
-  );
+    );
 }
 
 export default Header;
